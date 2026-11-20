@@ -1,0 +1,8 @@
+{
+	"name": "@lottery-pool/app",
+	"private": true,
+	"type": "module",
+	"scripts": {
+		"dev": "vite"
+	}
+}

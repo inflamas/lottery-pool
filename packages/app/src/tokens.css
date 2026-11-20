@@ -1,0 +1,37 @@
+/* The only place where raw colors, pixel sizes and fonts are written. */
+:root {
+	/* Colors */
+	--color-bg: #ffffff;
+	--color-surface: #f4f5f7;
+	--color-text: #1a1d21;
+	--color-text-muted: #5b6370;
+	--color-border: #d5d9e0;
+	--color-danger: #b3261e;
+	/* The one green: it means entry is open, and nothing else. */
+	--color-open: #1a7f37;
+
+	/* Spacing scale */
+	--space-1: 4px;
+	--space-2: 8px;
+	--space-3: 12px;
+	--space-4: 16px;
+	--space-5: 24px;
+	--space-6: 32px;
+	--space-7: 48px;
+
+	/* Radius */
+	--radius: 8px;
+
+	/* Type scale */
+	--text-sm: 14px;
+	--text-base: 16px;
+	--text-lg: 20px;
+	--text-xl: 28px;
+	--line-height: 1.5;
+
+	/* System font */
+	--font: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+
+	/* Layout */
+	--content-width: 720px;
+}
