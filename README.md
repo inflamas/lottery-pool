@@ -40,4 +40,4 @@ specs/roadmap.md                      the roadmap: every epic, in order
 
 The link goes both ways: the roadmap names the tickets of each epic, and line 2 of every `ticket.md` names its epic.
 
-Only tickets go through the pipeline. Everything the pipeline writes about a ticket (brainstorm, spec, progress, review, approval, retro, screenshots) lands in that ticket's folder, next to `ticket.md`.
+Only tickets go through the pipeline. Everything the pipeline writes about a ticket (brainstorm, spec, progress, review, retro, screenshots) lands in that ticket's folder, next to `ticket.md`.
