@@ -21,11 +21,11 @@ Stack: Bun workspaces, React + Vite (`packages/app`), Effect-TS API (`packages/a
 - Agents never merge and never push; a human merges each branch into `main` locally after approving it.
 - If a ticket's branch or file already exists, continue on it; never recreate a branch or overwrite a record.
 - Everything about a ticket lives in `specs/{nr}-{name}/` (ticket, brainstorm, spec, spec-review, progress, review, approval, retro, and `evidence/` for screenshots), the roadmap in `specs/roadmap.md`.
-- The agent may create a spec with "Status: draft". Only a human may change its status. The agent never writes `approval.md`, and never merges: only a human does.
-- While a spec is "Status: draft", the agent may revise its body, keeping every answer and every "## Gate feedback" a human wrote.
-- A spec with "Status: approved" is the implementation contract: never modify, delete, rename or replace it.
+- Merging is the approval: a spec has no status line. On `spec/{nr}-{name}` it is a draft; once a human merges that branch into `main` it is approved. The agent never writes `approval.md`, and never merges: only a human does.
+- The agent writes and revises `spec.md` only on `spec/{nr}-{name}`, keeping every answer and every "## Gate feedback" a human wrote.
+- A spec on `main` is the implementation contract: never modify, delete, rename or replace it on `main` or on a dev branch.
 - The first line of `progress.md` is the implementation state: "State: building", "State: blocked" or "State: ready for review".
-- If implementation reveals a material gap, write it under "## Proposed spec revision" in `progress.md`, set "State: blocked" and stop the affected work; the spec is revised only after a human returns it to "Status: draft", and the work resumes only after the human approves it again.
+- If implementation reveals a material gap, write it under "## Proposed spec revision" in `progress.md`, set "State: blocked" and stop the affected work; the spec is revised only on `spec/{nr}-{name}`, and the work resumes only after a human has merged the revision into `main` and `main` into the dev branch.
 - The implementation revision of a ticket is the last commit on its dev branch outside `progress.md`, `review.md`, `approval.md`, `evidence/` and `.claude/skills/`:
 
   ```sh
